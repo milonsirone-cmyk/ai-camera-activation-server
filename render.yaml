@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ai-camera-studio-activation
+    env: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: ACTIVATION_ADMIN_TOKEN
+        sync: false
+      - key: ACTIVATION_DB
+        value: /data/licenses.db
